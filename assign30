@@ -1,18 +1,17 @@
-def find_common_characters(msg1,msg2):
-    s=""
-    flag=True 
-    for i in msg1:
-        if i in msg2 and i not in s:
-            s+=i
-            flag=False
-    if(flag==True):
-         return -1
-    else:
-         return s
-          
-    return common_characters
-#Provide different values for msg1,msg2 and test your program
-msg1="I like Python"
-msg2="Java is a very popular language"
-common_characters=find_common_characters(msg1,msg2)
-print(common_characters)
+def encode(message):
+    count=1
+    encoded_message=""
+    for i in range(len(message)):
+        if(i<len(message)-1):
+            if(message[i]==message[i+1]):
+                count+=1
+            else:
+                encoded_message+=str(count)+message[i]
+                count=1
+        else:
+            encoded_message+=str(count)+message[i]
+            count=1
+    return encoded_message
+#Provide different values for message and test your program
+encoded_message=encode("ABBBBCCCCCCCCAB")
+print(encoded_message)
