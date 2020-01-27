@@ -1,0 +1,29 @@
+list_of_marks=(12,18,25,24,2,5,18,20,20,21)
+
+
+def find_more_than_average():
+    count=0
+    a=b=0
+    percent=0
+    for i in range(len(list_of_marks)):
+        a+=list_of_marks[i]
+    b=a/len(list_of_marks)
+    for i in range(len(list_of_marks)):
+        if(list_of_marks[i]>b):
+            count+=1
+    percent=count*10
+    return percent
+    
+def sort_marks():
+    x=list(list_of_marks)
+    x.sort()
+    return x
+def generate_frequency():
+    list1=[]
+    for i in range(0,26):
+        list1.append(list_of_marks.count(i))
+    return list1
+        
+print(find_more_than_average())
+print(generate_frequency())
+print(sort_marks())
