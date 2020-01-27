@@ -1,0 +1,17 @@
+def calculate(distance,no_of_passengers):
+    Price_per_litre_of_fuel = 70
+    Mileage_of_the_bus = 10
+    Price_per_ticket = 80
+    fuel_consumed=distance/Mileage_of_the_bus
+    income=no_of_passengers*Price_per_ticket
+    fuel_usage=fuel_consumed*Price_per_litre_of_fuel
+    if(income>fuel_usage):
+        profit=income-fuel_usage
+        return profit
+    else:
+        loss=-1
+        return loss
+#Provide different values for distance, no_of_passenger and test your program
+distance=20
+no_of_passengers=50
+print(calculate(distance,no_of_passengers))
