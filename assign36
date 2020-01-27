@@ -1,0 +1,11 @@
+def create_largest_number(number_list):
+    number_list.sort(reverse=True)
+    #n=number_list[::-1]
+    count=" "
+    for i in number_list:
+       count+=str(i)
+    return int(count)
+
+number_list=[23,45,67]
+largest_number=create_largest_number(number_list)
+print(largest_number)
