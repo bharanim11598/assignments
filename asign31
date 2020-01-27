@@ -1,0 +1,13 @@
+def check_palindrome(word):
+   rev=word[-1: :-1]
+   if(rev==word):
+       status=True
+       return status
+   else:
+       status=False
+       return status
+status=check_palindrome("malayalam")
+if(status):
+    print("word is palindrome")
+else:
+    print("word is not palindrome")
