@@ -1,0 +1,17 @@
+def check_double(number):
+    number1=str(number)
+    number2=str(number+number)
+    count=0
+    if(len(number1)==len(number2)):
+        for i in range(0,len(number1)):
+            for j in range(0,len(number2)):
+                if(number1[i]==number2[j]):
+                    count+=1
+    if(count==len(number1)):
+        return True
+    else:
+        return False 
+                
+        
+#Provide different values for number and test your program
+print(check_double(142857))
